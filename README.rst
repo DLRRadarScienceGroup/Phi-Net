@@ -101,7 +101,7 @@ This package is developed under Python 3.7 with tensorflow 1.13.1.
 Acknowledgements 
 ----------------
 
-The authors would like to acknowledge Philipp Posovsky and Andrea Pulella for their support in the set up of this repository.
+The authors would like to acknowledge Philipp Posovszky and Andrea Pulella for their support in the set up of this repository.
 
 
 License
@@ -109,7 +109,7 @@ License
 
 ::
 
-Copyright © 2020 Deutsches Zentrum für Lüft und Raumfahrt e.V.
+Copyright © 2020 Deutsches Zentrum für Luft und Raumfahrt e.V.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software
 and associated documentation files (the “Software”), to deal in the Software without 
