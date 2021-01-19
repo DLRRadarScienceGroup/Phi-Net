@@ -76,11 +76,11 @@ if __name__ == '__main__':
     args = parse_args()
     check_input_data(args)
 
-    master = np.load(os.path.join(args.noisy_dir, '/master.npy'))
-    slave  = np.load(os.path.join(args.noisy_dir, '/slave.npy'))
+    master = np.load(os.path.join(args.noisy_dir, 'master.npy'))
+    slave  = np.load(os.path.join(args.noisy_dir, 'slave.npy'))
 
-    pha = np.load(os.path.join(args.result_dir, '/estimated_phase.npy'))
-    coh = np.load(os.path.join(args.result_dir, '/estimated_coherence.npy'))
+    pha = np.load(os.path.join(args.result_dir, 'estimated_phase.npy'))
+    coh = np.load(os.path.join(args.result_dir, 'estimated_coherence.npy'))
 
     intf = master * np.conj(slave)
     noisyPha = np.angle(intf)
@@ -106,3 +106,4 @@ if __name__ == '__main__':
     plt.imshow(cohBox, vmin=0, vmax=1, cmap='jet'), plt.colorbar(), plt.title('Boxcar coherence')
     plt.subplot(235)
     plt.imshow(coh, vmin=0, vmax=1, cmap='jet'), plt.colorbar(), plt.title('Phi-Net coherence')
+    plt.show()
