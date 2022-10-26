@@ -44,7 +44,7 @@ Please cite this paper as:
 
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"  # assign the GPU id to the processor
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = "2"  # INFO, WARNING messages are not printed (default is 0)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = "0"  # INFO, WARNING messages are not printed (default is 0)
 
 import sys
 import argparse
@@ -52,7 +52,8 @@ import time
 import numpy as np
 stderr = sys.stderr
 sys.stderr = open(os.devnull, 'w')
-from keras.models import load_model
+import tensorflow as tf
+from tf.keras.models import load_model
 import PhiNet
 sys.stderr = stderr
 
@@ -63,7 +64,7 @@ def parse_args():
     parser.add_argument('--noisy_dir', default='./data/', type=str, help='directory of test dataset')
 #    ====================== MODEL FOLDER ====================
     parser.add_argument('--model_dir', default='./trained_model/', type=str, help='directory of the model')
-    parser.add_argument('--model_name', default='phi_net_model.hdf5', type=str, help='the model name')
+    parser.add_argument('--model_name', default='PhiNet_model.hdf5', type=str, help='the model name')
 #    ====================== OUTPUT DATA FOLDER ====================
     parser.add_argument('--result_dir', default='./result/', type=str, help='directory of results')
 
