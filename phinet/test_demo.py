@@ -44,7 +44,7 @@ Please cite this paper as:
 
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"  # assign the GPU id to the processor
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = "0"  # INFO, WARNING messages are not printed (default is 0)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = "2"  # INFO, WARNING messages are not printed (default is 0)
 
 import sys
 import argparse
@@ -52,8 +52,7 @@ import time
 import numpy as np
 stderr = sys.stderr
 sys.stderr = open(os.devnull, 'w')
-import tensorflow as tf
-from tf.keras.models import load_model
+from keras.models import load_model
 import PhiNet
 sys.stderr = stderr
 
