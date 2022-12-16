@@ -63,7 +63,7 @@ def parse_args():
     parser.add_argument('--noisy_dir', default='./data/', type=str, help='directory of test dataset')
 #    ====================== MODEL FOLDER ====================
     parser.add_argument('--model_dir', default='./trained_model/', type=str, help='directory of the model')
-    parser.add_argument('--model_name', default='phi_net_model.hdf5', type=str, help='the model name')
+    parser.add_argument('--model_name', default='PhiNet_model.hdf5', type=str, help='the model name')
 #    ====================== OUTPUT DATA FOLDER ====================
     parser.add_argument('--result_dir', default='./result/', type=str, help='directory of results')
 
